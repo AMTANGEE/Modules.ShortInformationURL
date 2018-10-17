@@ -11,7 +11,7 @@ This module adds the ability to define a link in the short information area. Bot
 ## Feedback 
 
 * Send us an email at support@amtangee.com
-* File an issue here in [GitHub](https://github.com/AMTANGEE/Module.ShortInformationURL/issues)
+* File an issue here in [GitHub](https://github.com/AMTANGEE/Modules.ShortInformationURL/issues)
 
 ## License
 
