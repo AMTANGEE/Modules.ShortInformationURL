@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Program Files %28x86%29\AMTANGEE\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\Program Files %28x86%29\AMTANGEE\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,17 +39,17 @@
   <ItemGroup>
     <Reference Include="AMTANGEE.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=a6052a4e2ab7d026, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.Controls.dll</HintPath>
     </Reference>
     <Reference Include="AMTANGEE.Interfaces">
-      <HintPath>..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.Interfaces.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="AMTANGEE.SDK">
-      <HintPath>..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.SDK.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.SDK.dll</HintPath>
     </Reference>
     <Reference Include="AMTANGEE.Style, Version=4.0.0.0, Culture=neutral, PublicKeyToken=a6052a4e2ab7d026, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.Style.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\AMTANGEE\AMTANGEE.Style.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,11 +60,12 @@
   <ItemGroup>
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource1.Designer.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource1.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SettingsClass.cs" />
     <Compile Include="SettingsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,16 +77,13 @@
     <None Include="AMTANGEE_Partner.snk" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resource1.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsControl.resx">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="first_aid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

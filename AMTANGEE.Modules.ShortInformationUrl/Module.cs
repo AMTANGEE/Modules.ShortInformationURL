@@ -18,7 +18,7 @@ namespace AMTANGEE.Modules.ShortInformationUrl
 
         public System.Drawing.Image Icon
         {
-            get { return null; }
+            get { return SettingsClass.IMAGE; }
         }
 
         public System.Windows.Forms.UserControl ModuleControl
@@ -58,7 +58,7 @@ namespace AMTANGEE.Modules.ShortInformationUrl
         {
             List<Interfaces.Contacts.ContactShortInformationEntry> result = new List<Interfaces.Contacts.ContactShortInformationEntry>();
 
-            AMTANGEE.Interfaces.Contacts.ContactShortInformationEntryExtended csie = new Interfaces.Contacts.ContactShortInformationEntryExtended(AMTANGEE.SDK.Resources.Images[SDK.Resources.ImageIndexes.Website],AMTANGEE.Style.FontBold,System.Drawing.Color.Black, AMTANGEE.SDK.Settings.Global["AMTANGEE.MODULES.SHORTINFORMATIONURL"]["TEXT"], "", contact,true);
+            AMTANGEE.Interfaces.Contacts.ContactShortInformationEntryExtended csie = new Interfaces.Contacts.ContactShortInformationEntryExtended(SettingsClass.IMAGE,AMTANGEE.Style.FontBold,System.Drawing.Color.Black, SettingsClass.TEXT, "", contact,true);
             result.Add(csie);
 
             return result;
@@ -68,7 +68,7 @@ namespace AMTANGEE.Modules.ShortInformationUrl
         {
             AMTANGEE.SDK.Contacts.ContactBase cb = (AMTANGEE.SDK.Contacts.ContactBase)entry.Data;
 
-            string url = AMTANGEE.SDK.Settings.Global["AMTANGEE.MODULES.SHORTINFORMATIONURL"]["URL"];
+            string url = SettingsClass.URL;
 
 
             url = url.Replace("@@GUID", cb.Guid.ToString());
@@ -135,7 +135,7 @@ namespace AMTANGEE.Modules.ShortInformationUrl
 
         System.Drawing.Image Interfaces.ISettingsFormPlugin.SettingsFormPluginIcon
         {
-            get { return AMTANGEE.SDK.Resources.Images[SDK.Resources.ImageIndexes.Website]; }
+            get { return SettingsClass.IMAGE; }
         }
 
         void Interfaces.ISettingsFormPlugin.SettingsFormPluginSave(string windowId)
